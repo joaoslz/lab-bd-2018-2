@@ -1,69 +1,80 @@
-use cursodb;
-
-desc aluno;
-
-/* ####### Group by e funções de agregação ##################
+/* ####### Junções, sub-consultas, group by, funções de agregação e visões ###########
 
 /* explicar o modelo */
 
-/* Exibindo alunos com matricula  */
-select nome /* projeção */
-from aluno  
-where exists 
-       ( select matricula.id 
-         from matricula 
-         where matricula.aluno_id = aluno.id);
+/* clausula EXISTS */
 
-select distinct a.nome 
-from aluno a  
-    join matricula m on a.id = m.aluno_id; 
-    
-select distinct a.nome 
-from aluno a, matricula m  
-where  a.id = m.aluno_id;     
+/* Exibindo alunos com matricula com a clausula exists */
+select a.nome from aluno a
+where exists (select m.id from matricula m where m.aluno_id = a.id);
 
-### consulta aqui
+/* Exibindo alunos com matricula com join */
+select distinct nome
+from aluno join matricula on aluno.id = matricula.aluno_id;
 
-/* Exibindo alunos sem matrícula */
-select nome
-from aluno
-where not exists (select matricula.id from matricula where matricula.aluno_id = aluno.id);
 
-select distinct a.nome /* , m.id */ 
-from aluno a 
-       left join matricula m on a.id = m.aluno_id
-where m.id is null; 
-       
+/* Exibindo alunos sem matrícula com a clausula exists */
+select nome from aluno 
+where not exists (select m.id from matricula m where m.aluno_id = aluno.id);
+
+select nome, matricula.id
+from aluno left join matricula on aluno.id = matricula.aluno_id;
+
+# Busca alunos sem matricula */
+select distinct nome
+from aluno left join matricula on aluno.id = matricula.aluno_id
+where matricula.id is null;
+
+/* Seleciona todos os alunos que se matricularam nos últimos 
+   12 meses */
+select a.nome from aluno a
+where exists (select m.id 
+              from matricula m 
+              where m.aluno_id = a.id and 
+                    m.data > now() - interval 12 month);
+
 
 /* Existem exercícios não respondidos? */
+select e.pergunta from exercicio e 
+where not exists (select r.id from resposta r where r.exercicio_id = e.id); 
 
 
-/* Mostre o nome do curso e a quantidade de matrículas, agrupadas por curso. */
+ ########## Limitando a quantidade de respostas e Paginação ###########
+ select * from aluno limit 0,3;
+ 
+ select * from aluno limit 3;
+
+ select * from aluno limit 3, 4;
+
+/* Mostre o nome do curso e a quantidade de matrículas, 
+   agrupadas por curso. */
+#-----------------------------------------
+select nome, count(matricula.id)
+from curso 
+       join matricula on curso.id = matricula.curso_id;
+#-----------------------------------------
+
+   
+select nome, count(matricula.id) as 'total_matriculas'
+from curso 
+       join matricula on curso.id = matricula.curso_id
+group by nome;
+
 
 select c.nome, count(m.id) 
-from curso c join matricula m on c.id = m.curso_id;
-
-
-select c.nome as curso, count(m.id) as 'Total de Matriculados'
-from curso c join matricula m on c.id = m.curso_id
-group by c.nome
-order by count(m.id) desc;
-
-
-select c.nome, count(m.id) from curso c
+from curso c
      join matricula m on m.curso_id=c.id
     group by c.nome;
 
 /* ************************** */
 /* Quero as médias das notas por curso? */
-select c.nome, avg(n.nota) as media, min(n.nota) nota_minima
-from nota n
+
+select c.nome, avg(n.nota)  
+ from nota n
     join resposta r on r.id = n.resposta_id
     join exercicio e on e.id = r.exercicio_id
     join secao s on s.id = e.secao_id
-    join curso c on c.id = s.curso_id
-group by c.nome;
-
+    join curso c on c.id = s.curso_id;
 
 select c.nome, round(avg(n.nota), 2) as media 
  from nota n
@@ -72,12 +83,21 @@ select c.nome, round(avg(n.nota), 2) as media
     join secao s on s.id = e.secao_id
     join curso c on c.id = s.curso_id
  group by c.nome;
+
+select c.nome, avg(n.nota) as media, min(n.nota) nota_minima*/
+from nota n
+    join resposta r on r.id = n.resposta_id
+    join exercicio e on e.id = r.exercicio_id
+    join secao s on s.id = e.secao_id
+    join curso c on c.id = s.curso_id
+group by c.nome
+having c.nome like 'S%';
  
  /* Devolva o curso e as médias de notas, 
  levando em conta somente alunos que tenham 
  "Silva" ou "Santos" no sobrenome.*/
  
- select c.nome, round(avg(n.nota), 2) as media 
+ select a.nome, c.nome, round(avg(n.nota), 2) as media 
  from nota n
     join resposta r on r.id = n.resposta_id
     join exercicio e on e.id = r.exercicio_id
@@ -87,6 +107,27 @@ select c.nome, round(avg(n.nota), 2) as media
     join aluno a on a.id = m.aluno_id
  where a.nome like '%Silva' or a.nome like '%Santos'   
  group by c.nome;
+ 
+select c.nome, round(avg(n.nota), 2) as media 
+from nota n
+    join resposta r on r.id = n.resposta_id
+    join exercicio e on e.id = r.exercicio_id
+    join secao s on s.id = e.secao_id
+    join curso c on c.id = s.curso_id
+    join aluno a on a.id = r.aluno_id
+ where a.nome like '%Silva' or a.nome like '%Santos'   
+ group by c.nome;
+ 
+select c.nome, a.nome as aluno, round(avg(n.nota), 2) as media 
+from nota n
+    join resposta r on r.id = n.resposta_id
+    join exercicio e on e.id = r.exercicio_id
+    join secao s on s.id = e.secao_id
+    join curso c on c.id = s.curso_id
+    join aluno a on a.id = r.aluno_id
+group by c.nome, a.nome;
+
+
  
  select c.nome, round(avg(n.nota), 2) as media 
  from aluno a, nota n
@@ -98,15 +139,15 @@ select c.nome, round(avg(n.nota), 2) as media
       ( a.nome like '%Silva' or a.nome like '%Santos')
  group by c.nome;
  
- select a.nome from aluno a where a.nome like '%Silva' or a.nome like '%Santos';
+ select a.nome
+ from aluno a 
+ where a.nome like '%Silva' or a.nome like '%Santos';
  
  /* Conte a quantidade de respostas por exercício. 
    Exiba a pergunta e o número de respostas.*/
 
  select e.pergunta, r.resposta_dada
- from exercicio e 
-    join resposta r on e.id = r.exercicio_id
- order by e.pergunta;
+ from exercicio e join resposta r on e.id = r.exercicio_id;
  
  
  select e.pergunta, count(r.resposta_dada) as total_resposta
@@ -114,9 +155,11 @@ select c.nome, round(avg(n.nota), 2) as media
  group by e.pergunta
  order by total_resposta desc;
  
+
 /* ####### Filtrando agregações e o HAVING ###################### */
 
-/* Selecione a média das notas de um aluno por curso
+/* Selecionando a média das notas de um aluno por curso
+   Agora precisamos então pegar a média das notas de um aluno em cada curso.
    Vamos agrupar esse resultado por nome do curso e aluno: */
 
 select a.nome, c.nome, round(avg(n.nota), 2) as media 
@@ -129,10 +172,10 @@ from nota n
 group by c.nome, a.nome;
 
 /* Com as médias dos alunos por curso , 
-   falta agora ver quais alunos estão com média baixa e vão ficar em recuperação. 
+   falta agora ver quais alunos estão com média baixa e 
+   vão ficar em recuperação. 
 */   
-select a.nome, c.nome, avg(n.nota) as media 
-from nota n
+select a.nome, c.nome, avg(n.nota) as media from nota n
     join resposta r on r.id = n.resposta_id
     join exercicio e on e.id = r.exercicio_id
     join secao s on s.id = e.secao_id
@@ -141,11 +184,10 @@ from nota n
 group by a.nome, c.nome
 having (avg(n.nota) < 5);
 
-
 # precisamos da clausula having para filtrar dados de agrupamento
 
 
-/* consulta: Quais cursos tém menos de 3 alunos. */
+/* consulta: Quais cursos tem menos de 3 alunos. */
 select c.nome, count(m.aluno_id) as qtdAlunos
 from matricula m join curso c on m.curso_id=c.id
 group by c.nome
@@ -188,7 +230,7 @@ esse resultado pelo nome do curso: */
 
 select c.nome, count(m.id) 
 from matricula m 
-     join curso c on m.curso_id = c.id
+        join curso c on m.curso_id = c.id
 group by c.nome;
 
 
@@ -201,7 +243,7 @@ where m.tipo = 'PAGA_PJ' or
       m.tipo = 'PAGA_PF'
 group by c.nome, m.tipo;
 
-/*Repare que temos um grupo de valores, no nosso caso são 2, PAGA_PJ e PAGA_PF, 
+/*Observe que temos um grupo de valores na consulta anterior, 'PAGA_PJ e PAGA_PF', 
 mas poderemos ter mais, e quando queremos passar um grupo de valores em 
 uma condição, podemos usar o IN: */
 
@@ -235,20 +277,10 @@ order by a.nome;
 Mas dessa vez, somente dos cursos com ID 1 e 3. */
 
 
-select e.pergunta, count(r.id) as respostas
-from exercicio e 
-  join resposta r on e.id = r.exercicio_id
-group by e.pergunta
-order by respostas desc;
- 
-
-
-
-select e.pergunta, count(r.id) 
-from exercicio e 
-  join resposta r on e.id = r.exercicio_id
-  join secao s on s.id = e.secao_id
-  join curso c on s.curso_id = c.id
+select e.pergunta, count(r.id) from
+exercicio e join resposta r on e.id = r.exercicio_id
+join secao s on s.id = e.secao_id
+join curso c on s.curso_id = c.id
 where c.id in (1,3)
 group by e.pergunta;
 
@@ -256,7 +288,7 @@ group by e.pergunta;
 /*
 Comparando a média geral de todos os cursos com a média de cada aluno
 
-Cenário: Queremos um relatório de como está a média de cada aluno em cada curso 
+Cenário: Queremo um relatório de como está a média de cada aluno em cada curso 
 comparado com a média geral de todos os cursos, para saber como estão o 
 desempenho de um aluno comparado com o desempenho de todos os alunos em geral.
 
@@ -268,8 +300,8 @@ Vamos primeiro fazer a média de cada aluno.
 Lembre que quando usamos alguma funções de agregação, no caso AVG. 
 Queremos agrupar por aluno e curso:
 */
-select a.nome, c.nome as curso, avg(n.nota) as media
-  from nota n 
+select a.nome, c.nome, round(avg(n.nota),2) 
+from nota n 
     join resposta r on r.id = n.resposta_id
     join exercicio e on e.id = r.exercicio_id
     join secao s on s.id = e.secao_id
@@ -285,21 +317,8 @@ select avg(n.nota) from nota n;
 
 /* Queremos fazer uma subtraçãoo no select, algo como: */
 
-select a.nome as aluno, 
-       c.nome as nome_curso,  
-       avg(n.nota) as media_geral, 
-       avg(n.nota) - (select avg(nota) from nota) as diferenca
-    from nota n 
-    join resposta r on r.id = n.resposta_id
-    join exercicio e on e.id = r.exercicio_id
-    join secao s on s.id = e.secao_id
-    join curso c on c.id = s.curso_id
-    join aluno a on r.aluno_id = a.id
-group by c.nome, a.nome;
-
-/* remover */
 select a.nome, 
-       c.nome,  
+       c.nome, 
        round(avg(n.nota), 2) as media_geral, 
        round((avg(n.nota) - (select avg(nota) from nota)), 2) as diferenca
     from nota n 
@@ -308,25 +327,11 @@ select a.nome,
     join secao s on s.id = e.secao_id
     join curso c on c.id = s.curso_id
     join aluno a on r.aluno_id = a.id
-    join matricula m on a.id = m.aluno_id
-where year(m.data) = 2014     
 group by c.nome, a.nome;
 
-# remover 
-select a.nome, round(avg(n1.nota), 2) as media, 
-avg(n1.nota) - (select avg(n2.nota) from nota n2) as diferenca
-from nota n1
-join resposta r on r.id = n1.resposta_id
-join exercicio e on e.id = r.exercicio_id
-join secao s on s.id = e.secao_id
-join aluno a on a.id = r.aluno_id
-where 
-a.id in (select aluno_id from matricula where year(data) =2014)
-group by a.nome;
-
-
-select a.nome, 
-       c.nome, 
+create view alunos_acima_media as
+select a.nome as aluno, 
+       c.nome as curso, 
        round(avg(n.nota), 2) as media_geral
     from nota n 
     join resposta r on r.id = n.resposta_id
@@ -336,6 +341,8 @@ select a.nome,
     join aluno a on r.aluno_id = a.id
 group by c.nome, a.nome
 having avg(n.nota) > (select avg(nota) from nota);
+
+select * from alunos_acima_media;
 
 /* Acabamos de fazer a query para selecionar a média geral, então: */
 
@@ -349,6 +356,7 @@ select a.nome, c.nome, avg(n.nota) as media,
 group by c.nome, a.nome;
 
 
+/* E se precisarmos listar apenas os alunos que estão acima ou abaixo da média */
 
 /* Cenario gostaria de saber se os alunos estão respondendo todos os exercícios. 
    Quero saber o número de respostas que cada um deu individualmente. */
@@ -371,7 +379,7 @@ from aluno a;
 Cenário: Queremos saber a quantidade de cursos que cada aluno faz (ou fez), 
          ou seja, quantas matrículas diferentes um aluno tem, 
          para tentar efetuar futuras vendas de cursos, 
-         pois alunos sem ou com poucas matrículas são clientes em potencial.
+         pois alunos sem ou com poucas matr?culas s?o clientes em potencial.
 */
 
 /* Para selecionar os alunos, fazemos: */
@@ -381,16 +389,8 @@ select a.nome from aluno a;
 select count(m.id) from matricula m;
 
 /*Agora, vamos juntar as duas queries:*/
-create view matriculas_por_aluno as
 select a.nome, 
-    (select counmatriculas_por_alunot(m.id) from matricula m where m.aluno_id = a.id) as matriculas 
-from aluno a
-order by matriculas desc;
+    (select count(m.id) from matricula m where m.aluno_id = a.id) as matriculas 
+from aluno a;
 
-/*
-select a.nome, count(m.id) as matriculas
-from aluno a 
-       left join matricula m on a.id = m.aluno_id
-group by a.nome
-order by matriculas desc;
-*/
+
