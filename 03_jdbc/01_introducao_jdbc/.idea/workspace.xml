@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c7f54f5-0c35-47e9-94b2-edd999d45653" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Ex01LendoEscrevendoTipoBlob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex01LendoEscrevendoTipoBlob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ex02LendoTipoBlob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex02LendoTipoBlob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsereProdutoComInjecaoDeSQLTeste.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../lab_bd-2018-codigos/02-dao-jdbc-v1/src/main/java/teste_jdbc/InsereProdutoComInjecaoDeSQLTeste.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="23" column="47" selection-start-line="23" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ex03ProcedureResultSet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/procedures/Ex03ProcedureResultSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/Ex01RelatorioDeAlunos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/Ex01ListagemDeAlunos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/Ex02InsereProduto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/Ex01ListagemProdutos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/Ex03InsereProdutoComInjecaoDeSQL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/modelo/Produto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/infra/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex03InsereProdutoComInjecaoDeSQL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex01ListagemProdutos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex01ListagemDeAlunos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex02InsereProduto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/dao/ProdutoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/procedures/Ex01ProcedureParametroIn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/procedures/Ex02ProcedureParametroInOut.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/procedures/Ex03ProcedureResultSet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex02InsereProduto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex01LendoEscrevendoTipoBlob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex02LendoTipoBlob.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="aulajdbc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="01_introducao_jdbc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="01_introducao_jdbc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.ifma.dcomp.aulajdbc.exemplos.tipoblob" />
+      <recent name="edu.ifma.dcomp.aulajdbc.exemplos.procedures" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\joaoc\Documents\disciplinas\lab_bd-2018-2\03_jdbc\aulajdbc\src\main\java\edu\ifma\dcomp\aulajdbc\estoque\dao" />
+      <recent name="C:\Users\joaoc\Documents\disciplinas\lab_bd-2018-2\03_jdbc\aulajdbc\src\main\java\edu\ifma\dcomp\aulajdbc\estoque\infra" />
+      <recent name="C:\Users\joaoc\Documents\disciplinas\lab_bd-2018-2\03_jdbc\aulajdbc\src\main\java\edu\ifma\dcomp\aulajdbc\estoque\modelo" />
+      <recent name="C:\Users\joaoc\Documents\disciplinas\lab_bd-2018-2\03_jdbc\aulajdbc\src\main\java\edu\ifma\dcomp\aulajdbc" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Ex03ProcedureResultSet">
+    <configuration name="Ex01LendoEscrevendoTipoBlob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.ifma.dcomp.aulajdbc.exemplos.tipoblob.Ex01LendoEscrevendoTipoBlob" />
+      <module name="01_introducao_jdbc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.ifma.dcomp.aulajdbc.exemplos.tipoblob.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Ex01ProcedureParametroIn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.ifma.dcomp.aulajdbc.exemplos.procedures.Ex01ProcedureParametroIn" />
+      <module name="01_introducao_jdbc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.ifma.dcomp.aulajdbc.exemplos.procedures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Ex02LendoTipoBlob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.ifma.dcomp.aulajdbc.exemplos.tipoblob.Ex02LendoTipoBlob" />
+      <module name="01_introducao_jdbc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.ifma.dcomp.aulajdbc.exemplos.tipoblob.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Ex02ProcedureParametroInOut" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.ifma.dcomp.aulajdbc.exemplos.procedures.Ex02ProcedureParametroInOut" />
+      <module name="01_introducao_jdbc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.ifma.dcomp.aulajdbc.exemplos.procedures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Ex03ProcedureResultSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.ifma.dcomp.aulajdbc.exemplos.procedures.Ex03ProcedureResultSet" />
+      <module name="01_introducao_jdbc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.ifma.dcomp.aulajdbc.exemplos.procedures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Ex01ProcedureParametroIn" />
+      <item itemvalue="Application.Ex02ProcedureParametroInOut" />
+      <item itemvalue="Application.Ex01LendoEscrevendoTipoBlob" />
+      <item itemvalue="Application.Ex02LendoTipoBlob" />
+      <item itemvalue="Application.Ex03ProcedureResultSet" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Ex03ProcedureResultSet" />
+        <item itemvalue="Application.Ex02LendoTipoBlob" />
+        <item itemvalue="Application.Ex01LendoEscrevendoTipoBlob" />
+        <item itemvalue="Application.Ex02ProcedureParametroInOut" />
+        <item itemvalue="Application.Ex01ProcedureParametroIn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c7f54f5-0c35-47e9-94b2-edd999d45653" name="Default" comment="" />
+      <created>1540944412758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540944412758</updated>
+      <workItem from="1540944416636" duration="2421000" />
+      <workItem from="1541083151672" duration="6410000" />
+      <workItem from="1541442967112" duration="13147000" />
+      <workItem from="1541529359500" duration="194000" />
+      <workItem from="1541529643600" duration="347000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="22519000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="DB Browser" order="2" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32843137" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="DB Execution Console" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.14362416" side_tool="true" weight="0.22712418" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295302" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8563758" visible="true" weight="0.26694915" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info id="Designer" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25838926" />
+      <window_info id="Project Explorer" order="3" />
+      <window_info id="Job Explorer" order="5" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32959184" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Console" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8563758" weight="0.30973452" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5263158" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="DB Execution Console" order="13" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Designer" order="7" />
+      <window_info id="Project Explorer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Job Explorer" order="5" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32959184" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.14362416" side_tool="true" weight="0.22712418" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32843137" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.3295302" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex01LendoEscrevendoTipoBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex02LendoTipoBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../lab_bd-2018-codigos/02-dao-jdbc-v1/src/main/java/teste_jdbc/InsereProdutoComInjecaoDeSQLTeste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="23" column="47" selection-start-line="23" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex01LendoEscrevendoTipoBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex02LendoTipoBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../lab_bd-2018-codigos/02-dao-jdbc-v1/src/main/java/teste_jdbc/InsereProdutoComInjecaoDeSQLTeste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex03InsereProdutoComInjecaoDeSQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex01ListagemDeAlunos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/dao/ProdutoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/modelo/Produto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex01ListagemProdutos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex02InsereProduto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="86" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex01ListagemDeAlunos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/infra/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/infra/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex01ListagemProdutos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/modelo/Produto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/estoque/dao/ProdutoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex02InsereProduto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="14" column="86" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex03InsereProdutoComInjecaoDeSQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/Ex01ListagemDeAlunos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="36" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/procedures/Ex01ProcedureParametroIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="69" lean-forward="true" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/procedures/Ex02ProcedureParametroInOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/produto01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex01LendoEscrevendoTipoBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/tipoblob/Ex02LendoTipoBlob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../lab_bd-2018-codigos/02-dao-jdbc-v1/src/main/java/teste_jdbc/InsereProdutoComInjecaoDeSQLTeste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="23" column="47" selection-start-line="23" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ifma/dcomp/aulajdbc/exemplos/procedures/Ex03ProcedureResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
