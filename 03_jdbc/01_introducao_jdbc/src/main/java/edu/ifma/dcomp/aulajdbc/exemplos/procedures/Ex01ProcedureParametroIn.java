@@ -12,21 +12,27 @@ public class Ex01ProcedureParametroIn {
 		try (Connection connection = DriverManager.getConnection(url, "root", "root")) {
 
 			try ( CallableStatement statement =
-						  connection
-								  .prepareCall("{ call sp_atualizaEstoque(?, ?, ?)}") ) {
+				 connection
+					 .prepareCall("{ call sp_atualizaEstoque(?, ?, ?)}") ) {
+
+
 
 				// define os parâmetros
-				statement.setInt(1, 2);
-				statement.setInt(2, 50);
-				statement.setBigDecimal(3, new BigDecimal(20.9));
+				Integer idProduto = 3;
+				Integer quantidadeComprada = 50;
+				BigDecimal valorUnitario = new BigDecimal(20.9);
+
+				statement.setInt(1, idProduto);
+				statement.setInt(2, quantidadeComprada);
+				statement.setBigDecimal(3, valorUnitario);
 
 				// chamando antes da procedure
-				exibeEstoqueDoProdutoDeId(2, connection.createStatement() );
+				exibeEstoqueDoProdutoDeId(idProduto, connection.createStatement() );
 
 				statement.execute();
 
 				// chamando depois da procedure
-				exibeEstoqueDoProdutoDeId(2, connection.createStatement() );
+				exibeEstoqueDoProdutoDeId(idProduto, connection.createStatement() );
 
 			}
 		}
@@ -35,7 +41,8 @@ public class Ex01ProcedureParametroIn {
 
 	private static void exibeEstoqueDoProdutoDeId(int id, Statement statement) throws SQLException {
 
-		ResultSet resultSet = statement.executeQuery("select * from estoque where id = " + id);
+		ResultSet resultSet = statement
+				.executeQuery("select * from estoque where id = " + id);
 
 		if (resultSet.next() ) {
 

@@ -16,7 +16,7 @@ public class Ex02LendoTipoBlob {
 
 		try (Connection connection = DriverManager.getConnection(url, "root", "root")) {
 
-			String sqlUpdate = "update produto set foto=? where id=2";
+			String sqlUpdate = "update produto set foto=? where id=3";
 
 			try (PreparedStatement statement = connection.prepareStatement(sqlUpdate) ) {
 

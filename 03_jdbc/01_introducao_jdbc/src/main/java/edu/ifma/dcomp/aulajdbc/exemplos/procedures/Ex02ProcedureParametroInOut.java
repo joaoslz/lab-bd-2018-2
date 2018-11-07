@@ -16,15 +16,19 @@ public class Ex02ProcedureParametroInOut {
 
 				// define os parâmetros
 				statement.setInt(1, 2 );
-				statement.setInt(2, 600 );
+				statement.setInt(2, 680 );
+				statement.registerOutParameter(2, Types.INTEGER);
 
 				// chamando antes da procedure
-				exibeEstoqueMaximoDoProdutoDeId(2, connection.createStatement() );
+				// exibeEstoqueMaximoDoProdutoDeId(2, statement );
 
 				statement.execute();
 
+				String parametroOut = statement.getString(2);
+				System.out.println("Novo Estoque Máximo " + parametroOut );
+
 				// chamando depois da procedure
-				exibeEstoqueMaximoDoProdutoDeId(2, connection.createStatement() );
+				//exibeEstoqueMaximoDoProdutoDeId(2, statement );
 
 			}
 		}
@@ -33,14 +37,14 @@ public class Ex02ProcedureParametroInOut {
 
 	private static void exibeEstoqueMaximoDoProdutoDeId(int id, Statement statement) throws SQLException {
 
-		ResultSet resultSet = statement.executeQuery("select estoque_maximo from produto where id = " + id);
 
-
+		//ResultSet resultSet = statement.executeQuery("select estoque_maximo from produto where id = " + id);
+		ResultSet resultSet = statement.getResultSet() ;
 
 
 		if (resultSet.next() ) {
 			String resultado = String.format("( Produto: %d, estoque_máximo: %d ) ",
-					                                     id, resultSet.getInt("estoque_maximo") );
+					                                     id, resultSet.getInt("novoEstoqueMaximo") );
 			System.out.println(resultado );
 		}
 	}
