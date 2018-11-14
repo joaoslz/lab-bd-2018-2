@@ -1,11 +1,10 @@
-package edu.ifma.dcomp.aulajdbc.estoque.infra;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-
-import javax.sql.DataSource;
+package ifma.dcomp.lbd.aula_jdbc.infra;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class ConnectionPool {
 	
@@ -15,15 +14,15 @@ public class ConnectionPool {
 	public ConnectionPool() {
 		
 		MysqlDataSource mysqlDataSource = new MysqlDataSource();
-		
+		//String url = "jdbc:mysql://localhost/estoque?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 		String url = "jdbc:mysql://localhost/estoque?useSSL=false";
 		
 		mysqlDataSource.setURL(url);
 		mysqlDataSource.setUser("root");
 		mysqlDataSource.setPassword("root");
-
+		
 		this.dataSource = mysqlDataSource;
-
+		
 	}
 	
 	

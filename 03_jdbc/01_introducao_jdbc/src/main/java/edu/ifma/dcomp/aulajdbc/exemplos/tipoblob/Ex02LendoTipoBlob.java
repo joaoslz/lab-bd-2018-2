@@ -25,7 +25,7 @@ public class Ex02LendoTipoBlob {
 				File novaFoto = new File("produto01.png");
 
 				try {
-					FileInputStream streamDaFoto = new FileInputStream(novaFoto);
+					FileInputStream streamDaFoto = new FileInputStream(novaFoto );
 					statement.setBinaryStream(1, streamDaFoto );
 
 				} catch (FileNotFoundException e) {

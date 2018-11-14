@@ -43,7 +43,7 @@ public class ProdutoDAO {
 
 	public List<Produto> recuperaProdutos() throws SQLException {
 
-		String sql = "select * from produto";
+		String sql = "select * from produtos";
 
 		try (PreparedStatement statment = conexao.prepareStatement(sql)) {
 			
@@ -54,7 +54,7 @@ public class ProdutoDAO {
 			
 			final List<Produto> produtos = new ArrayList<>();
 			
-			while (resultSet.next()) {
+			while (resultSet.next() ) {
 				Produto produto = montaProduto(resultSet);
 				produtos.add(produto);
 			}
@@ -70,6 +70,7 @@ public class ProdutoDAO {
 		
 		Produto p = new Produto(nome, descricao);
 		p.setId(id);
+
 		return p;
 	}
 
