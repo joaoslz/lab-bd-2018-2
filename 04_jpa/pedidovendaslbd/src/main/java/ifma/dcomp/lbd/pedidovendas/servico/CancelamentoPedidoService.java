@@ -1,9 +1,10 @@
 package ifma.dcomp.lbd.pedidovendas.servico;
 
-import edu.ifma.dcomp.pedidovendas.modelo.Pedido;
-import edu.ifma.dcomp.pedidovendas.modelo.StatusPedido;
-import edu.ifma.dcomp.pedidovendas.repositorio.PedidoRepository;
-import edu.ifma.dcomp.pedidovendas.util.EMFactory;
+
+import ifma.dcomp.lbd.pedidovendas.modelo.Pedido;
+import ifma.dcomp.lbd.pedidovendas.modelo.StatusPedido;
+import ifma.dcomp.lbd.pedidovendas.repositorio.PedidoRepository;
+import ifma.dcomp.lbd.pedidovendas.util.EMFactory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;

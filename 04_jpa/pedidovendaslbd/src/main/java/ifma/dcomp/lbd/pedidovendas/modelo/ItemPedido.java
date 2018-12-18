@@ -9,7 +9,7 @@ import java.util.Objects;
 public class ItemPedido {
 
     @EmbeddedId
-    private ItemPedidoPK id;
+    private ItemPedidoPK id = new ItemPedidoPK();
 
     private Integer quantidade;
 
@@ -53,6 +53,15 @@ public class ItemPedido {
 
     public Produto getProduto() {
         return id.getProduto();
+    }
+
+
+    public void setProduto(Produto produto) {
+        id.setProduto(produto);
+    }
+
+    public void setPedido(Pedido pedido) {
+        id.setPedido(pedido);
     }
 
     @Override

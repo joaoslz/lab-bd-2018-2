@@ -1,6 +1,7 @@
 package ifma.dcomp.lbd.pedidovendas.repositorio;
 
-import edu.ifma.dcomp.pedidovendas.modelo.Cliente;
+
+import ifma.dcomp.lbd.pedidovendas.modelo.Cliente;
 
 import javax.persistence.EntityManager;
 import java.util.List;

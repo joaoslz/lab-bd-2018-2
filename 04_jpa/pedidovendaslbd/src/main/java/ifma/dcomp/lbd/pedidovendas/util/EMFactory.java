@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 public class EMFactory {
 
     private static final EntityManagerFactory factory =
-            Persistence.createEntityManagerFactory("pedidovendasPU");
+            Persistence.createEntityManagerFactory("pedidovendas");
 
 
     public EntityManager getEntityManager() {

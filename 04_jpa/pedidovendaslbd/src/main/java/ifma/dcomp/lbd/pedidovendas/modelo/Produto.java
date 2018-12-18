@@ -3,6 +3,7 @@ package ifma.dcomp.lbd.pedidovendas.modelo;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public class Produto {
     private BigDecimal precoAtual;
 
     @Column(name = "quantidade_estoque")
-    private Integer quantidadeEstoque;
+    private Integer quantidadeEstoque = 0;
 
     @ManyToMany
     @JoinTable(name = "produto_categoria",
@@ -67,6 +68,13 @@ public class Produto {
         return quantidadeEstoque;
     }
 
+    public void adiciona(Categoria categoria ) {
+        categorias.add(categoria );
+    }
+
+    public void setCategorias(Categoria... categorias) {
+        this.categorias = Arrays.asList(categorias );
+    }
 
 
     public void adicionaEstoque(Integer quantidade ) {

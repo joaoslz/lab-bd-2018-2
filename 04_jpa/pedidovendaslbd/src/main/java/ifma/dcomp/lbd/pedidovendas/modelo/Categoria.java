@@ -1,6 +1,8 @@
 package ifma.dcomp.lbd.pedidovendas.modelo;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -10,7 +12,18 @@ public class Categoria {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(nullable = false)
     private String nome;
+
+
+   @ManyToOne
+    @JoinColumn(name = "categoriapai_id")
+    private Categoria categoriaPai;
+
+    @OneToMany(mappedBy = "categoriaPai", cascade = CascadeType.ALL)
+    private List<Categoria> subCategorias = new ArrayList<>();
+
+
 
     public Integer getId() {
         return id;
@@ -28,6 +41,22 @@ public class Categoria {
         this.nome = nome;
     }
 
+    public Categoria getCategoriaPai() {
+        return this.categoriaPai;
+    }
+
+    public void setCategoriaPai(Categoria categoriaPai) {
+        this.categoriaPai = categoriaPai;
+    }
+
+    public List<Categoria> getSubCategorias() {
+        return this.subCategorias;
+    }
+
+    public void setSubCategorias(List<Categoria> subCategorias) {
+        this.subCategorias = subCategorias;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -39,7 +68,9 @@ public class Categoria {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(getId());
     }
+
+
+
 }
