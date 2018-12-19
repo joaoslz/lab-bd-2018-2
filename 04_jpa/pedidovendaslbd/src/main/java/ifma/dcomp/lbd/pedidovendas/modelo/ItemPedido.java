@@ -56,7 +56,7 @@ public class ItemPedido {
     }
 
 
-    public void setProduto(Produto produto) {
+    public void setProduto(Produto produto ) {
         id.setProduto(produto);
     }
 
@@ -80,6 +80,8 @@ public class ItemPedido {
 
 
     public void retornaParaOEstoque() {
+
         this.id.getProduto().adicionaEstoque(this.quantidade );
     }
+
 }

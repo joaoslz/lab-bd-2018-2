@@ -12,17 +12,18 @@ public class TesteCategoria {
 
 		// instanciamos a categoria pai
 		Categoria categoriaPai = new Categoria();
-		categoriaPai.setNome("Papelaria" );
+		categoriaPai.setNome("Eletrônicos" );
 
 		// instanciamos a categoria filha (Cadernos)
 		Categoria categoriaFilha1 = new Categoria();
-		categoriaFilha1.setNome("Caderno" );
+
+		categoriaFilha1.setNome("Pen Driver" );
 		categoriaFilha1.setCategoriaPai(categoriaPai );
 		// adicionamos a categoria caderno como filha de Papelaria
 
 		// instanciamos a categoria filha (Cadernos)
 		Categoria categoriaFilha2 = new Categoria();
-		categoriaFilha2.setNome("Caneta" );
+		categoriaFilha2.setNome("HD" );
 		categoriaFilha2.setCategoriaPai(categoriaPai );
 
 		// adicionamos a categoria caderno como filha de Papelaria
@@ -37,8 +38,13 @@ public class TesteCategoria {
 		// ao persistir a categoria pai (Papelaria), a filha (Caderno)
 		// deve ser persistida também
 
-		categoriaPai.getSubCategorias().add(categoriaFilha1);
-		categoriaPai.getSubCategorias().add(categoriaFilha2 );
+		/*categoriaPai.getSubCategorias().add(categoriaFilha1);
+		categoriaPai.getSubCategorias().add(categoriaFilha2 );*/
+
+		/*categoriaPai.adicionaSubCategoria(categoriaFilha1 );
+		categoriaPai.adicionaSubCategoria(categoriaFilha2 );*/
+
+		categoriaPai.adicionaSubCategorias(categoriaFilha1, categoriaFilha2 );
 
 		manager.persist(categoriaPai );
 

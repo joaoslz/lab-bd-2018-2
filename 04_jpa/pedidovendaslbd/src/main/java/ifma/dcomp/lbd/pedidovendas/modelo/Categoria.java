@@ -1,9 +1,7 @@
 package ifma.dcomp.lbd.pedidovendas.modelo;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 @Table(name = "categoria")
@@ -16,7 +14,7 @@ public class Categoria {
     private String nome;
 
 
-   @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "categoriapai_id")
     private Categoria categoriaPai;
 
@@ -50,7 +48,7 @@ public class Categoria {
     }
 
     public List<Categoria> getSubCategorias() {
-        return this.subCategorias;
+        return Collections.unmodifiableList(this.subCategorias);
     }
 
     public void setSubCategorias(List<Categoria> subCategorias) {
@@ -72,5 +70,13 @@ public class Categoria {
     }
 
 
+    public void adicionaSubCategorias(Categoria... categorias) {
 
+        for (Categoria categoria : categorias ) {
+            this.subCategorias.add(categoria );
+        }
+
+        // this.subCategorias.addAll(Arrays.asList(categorias ) );
+
+    }
 }

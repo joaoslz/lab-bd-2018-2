@@ -32,7 +32,9 @@ public class TestePedido {
 		Pedido pedido = new Pedido();
 		pedido.setCliente(cliente);
 
-		pedido.setStatus(StatusPedido.ORCAMENTO);
+		// código redundante
+		// pedido.setStatus(StatusPedido.ORCAMENTO);
+
 		pedido.setValorDesconto(BigDecimal.ZERO);
 		pedido.setValorFrete(BigDecimal.ZERO);
 
@@ -40,12 +42,15 @@ public class TestePedido {
 		
 		ItemPedido item = new ItemPedido();
 
-		item.getId().setProduto(produto );
+		//item.getId().setProduto(produto );
+		item.setProduto(produto );
 		item.setQuantidade(10);
+
 		//item.setPreco(new BigDecimal(2.32));
-		item.getId().setPedido(pedido);
+
+		item.setPedido(pedido);
 		
-		pedido.getItens().add(item);
+		pedido.adiciona(item);
 		
 		manager.persist(pedido);
 		

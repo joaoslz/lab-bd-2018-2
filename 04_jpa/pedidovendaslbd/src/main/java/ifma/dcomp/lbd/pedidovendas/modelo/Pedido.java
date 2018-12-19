@@ -178,4 +178,10 @@ public class Pedido {
     public void setPagamento(Pagamento pagamento) {
         this.pagamento = pagamento;
     }
+
+    public void adiciona(ItemPedido... itens) {
+        for (ItemPedido item : itens ) {
+            this.itens.add(item );
+        }
+    }
 }
