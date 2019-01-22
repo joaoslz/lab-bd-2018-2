@@ -24,6 +24,9 @@ public class ProdutoRepository {
         return produtoSalvo;
     }
 
+
+
+
     public void remover(Produto produto) throws NegocioException {
         try {
             produto = porId(produto.getId() );

@@ -1,5 +1,7 @@
 package ifma.dcomp.lbd.pedidovendas.modelo;
 
+import ifma.dcomp.lbd.pedidovendas.servico.NegocioException;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -86,7 +88,8 @@ public class Produto {
     }
 
 
- /*   public void baixarEstoque(Integer quantidade) throws NegocioException {
+
+       public void baixarEstoque(Integer quantidade) throws NegocioException {
         int novaQuantidade = this.getQuantidadeEstoque() - quantidade;
 
         if (novaQuantidade < 0) {
@@ -97,7 +100,7 @@ public class Produto {
 
         this.quantidadeEstoque = novaQuantidade;
     }
-*/
+
 
     @Override
     public boolean equals(Object o) {

@@ -44,6 +44,6 @@ public class CadastroProdutoService {
     }
 
     public List<Produto> porNome(String nome) {
-        return repositorio.porNome(nome);
+          return repositorio.porNome(nome);
     }
 }
